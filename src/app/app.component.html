@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>{{ title | uppercase }}</h1>
+  <div class="task-info">
+    <input type="text" placeholder="Enter a new task..." #task>
+
+    <button class="add" (click)="addTask(task.value)">ADD</button>
+
+  </div>
+  <div class="items">
+    <ul *ngFor="let item of list">
+      <li> {{ item.name }} <button class="remove" (click)="removeTask(item.id)">REMOVE</button></li>
+    </ul>
+  </div>
+  <footer>Angular app</footer>
+</div>
